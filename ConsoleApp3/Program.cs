@@ -15,8 +15,8 @@ namespace ConsoleApp3
             Random random = new Random();
             int minValue = 0;
             int maxValue = 101;
-            int multiple3 = 3;
-            int multiple5 = 5;
+            int firstDivisor = 3;
+            int secondDivisor = 5;
             int randomNumber = random.Next(minValue,maxValue);
             int sum = 0;
 
@@ -24,11 +24,11 @@ namespace ConsoleApp3
 
             for (int i = 0; i <= randomNumber; i++)
             {
-                if (i % multiple3 == 0 || i % multiple5 == 0)
+                if (i % firstDivisor == 0 || i % secondDivisor == 0)
                 {
                     sum += i;
 
-                    Console.WriteLine($"Числа кратные 3 и 5:{i}\nСумма чисел:{sum}");
+                    Console.WriteLine($"Числа кратные {firstDivisor} и {secondDivisor}:{i}\nСумма чисел:{sum}");
                 }
             }
         }
